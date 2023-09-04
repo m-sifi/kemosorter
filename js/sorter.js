@@ -838,6 +838,9 @@ function preloadImages() {
             if ( img.complete || img.complete === undefined ) {
               img.src = src;
             }
+
+            src = src.replace('https://imgur.com/', 'https://i.imgur.com/');
+            
             img.src = src;
         });
     };
