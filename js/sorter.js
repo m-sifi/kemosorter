@@ -838,6 +838,11 @@ function preloadImages() {
             if ( img.complete || img.complete === undefined ) {
               img.src = src;
             }
+
+            if(src.indexOf('i.imgur.com') === 0){
+                src = src.replace('imgur.com', 'i.imgur.com');
+            }
+            
             img.src = src;
         });
     };
